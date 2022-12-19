@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BookStore</string>
+    <string name="sort">Выберите фильтр по коктелям</string>
+</resources>

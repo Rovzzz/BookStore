@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bookstore.ADD">
+
+    <RelativeLayout
+        android:id="@+id/Up"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#D1E8E2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Down"
+        android:layout_below="@+id/Up"
+        android:background="#D1E8E2"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ImgBut"
+            android:layout_width="328dp"
+            android:layout_height="328dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:backgroundTint="#029D8D8F"
+            android:minWidth="250dp"
+            android:minHeight="250dp"
+            android:onClick="onClickChooseImage"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/book"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/edtBook"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:hint="Название книги"
+            android:minHeight="48dp"
+            android:textColor="#000000"></EditText>
+
+        <EditText
+            android:id="@+id/edtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:hint="Цена"
+            android:minHeight="48dp"
+            android:textColor="#000000"></EditText>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Down"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-2dp"
+        android:background="#D1E8E2"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/BackAdd"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#7147D7"
+            android:text="Назад"
+            android:onClick="Back_bt"
+            android:textColor="#6C8CD5"
+            app:cornerRadius="25dp"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/Add"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#4671D5"
+            android:minHeight="48dp"
+            android:onClick="Add"
+            android:text="Добавить"
+            android:textColor="#250672"
+            app:cornerRadius="25dp"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
